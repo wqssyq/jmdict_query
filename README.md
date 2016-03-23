@@ -1,6 +1,8 @@
 # jmdict_query
 
 Query japanese . the dictionary is by jmdict.
+1. can convert katakana to hiragana
+2. out put romazi. 
 
 How to use:
 
