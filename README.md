@@ -9,13 +9,13 @@ How to use:
 2. then type in the japanese word, such as:プロジェクト
 
 3. will output:
-ぷろじぇくと | purojiekuto
+ぷろじぇくと | purojiekuto<br>
 null | ぷろじぇくと | purojiekuto | プロジェクト /(n) project/(P)/
 
 4. then type in the japanese word, such as:発表
 
 5. will output:
-発表 | 発表
+発表 | 発表<br>
 発表 | はっぴょう | hatsupiou | (n,vs) announcement/publication/presenting/statement/communique/making known/breaking (news story)/expressing (one's opinion)/releasing/unveiling/(P)
 
 
