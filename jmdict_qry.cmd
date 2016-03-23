@@ -1,0 +1,1 @@
+java -cp "bin;lib\sqlite-jdbc-3.8.11.2.jar" ReadLine
