@@ -1,10 +1,10 @@
 # jmdict_query
 
-Query japanese . the dictionary is by jmdict.
+Query japanese , The dictionary is by jmdict.
 
-1. can convert katakana to hiragana
+1. Can convert katakana to hiragana
 
-2. out put romazi. 
+2. Out put romazi. 
 
 How to use:
 
@@ -23,7 +23,7 @@ null | ぷろじぇくと | purojiekuto | プロジェクト /(n) project/(P)/
 発表 | はっぴょう | hatsupiou | (n,vs) announcement/publication/presenting/statement/communique/making known/breaking (news story)/expressing (one's opinion)/releasing/unveiling/(P)
 
 
-there is the run message :<br>
+There is the run message :<br>
 java -cp "bin;lib\sqlite-jdbc-3.8.11.2.jar" ReadLine<br>
 按Q/q键退出!<br>
 プロジェクト<br>
