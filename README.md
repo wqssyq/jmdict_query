@@ -4,7 +4,7 @@ Query japanese , The dictionary is by jmdict.
 
 1. Can convert katakana to hiragana
 
-2. Out put romaji. 
+2. The out put include romaji. 
 
 How to use:
 
