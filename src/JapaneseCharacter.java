@@ -303,14 +303,17 @@ public class JapaneseCharacter {
 			"ko", "go",
 
 			"sa", "za",
-			"shi", "ji",
+//			"shi", "ji",
+			"si", "ji",
 			"su", "zu",
 			"se", "ze",
 			"so", "zo",
 
 			"ta", "da",
-			"chi", "ji",
-			"tsu", "tsu", "zu",
+//			"chi", "ji",
+			"ti", "ji",			
+//			"tsu", "tsu", "zu",
+			"tu", "tu", "zu",			
 			"te", "de",
 			"to", "do",
 
