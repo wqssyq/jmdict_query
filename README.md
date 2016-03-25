@@ -6,6 +6,8 @@ Query japanese , The dictionary is by jmdict.
 
 2. The out put include romaji. 
 
+3. Database is jmdict sqlite, jdbc is sqlite-jdbc-3.8.11.2.jar. 
+
 How to use:
 
 1. Click [jmdict_qry.cmd] to run the application.
