@@ -6,7 +6,8 @@ import java.sql.Statement;
 
 public class Jmdict {
 	public static int page = 10;
-	public static void doQuery(String data){
+	public static int doQuery(String data, boolean isKanji){
+		int count = 0;
 		Connection connection = null;
 		try {
 			// create a database connection
@@ -20,8 +21,13 @@ public class Jmdict {
 			//System.out.println( "connection: " + connection + " statement: " + statement);
 			
 			//String sql = "select * from dict where kanji like '" + data + "%'  or kana like '" + data + "%'";
-			String sql = "select * from dict where kanji like '" + data + "%'  or kana like '" + data + "%' "
-					+ "order by length(kana)";
+			String sql = "select * from dict where kanji like '" + data + "%'  or kana like '" + data + "%' ";
+			// "order by length(kana)";
+			if(isKanji){
+				sql += "order by length(kanji)";
+			}else{
+				sql += "order by length(kana)";
+			}
 			//String sql = "select * from dict where kanji = '" + data + "'  or kana = '" + data + "'";
 			
 			ResultSet rs = statement.executeQuery(sql);
@@ -31,7 +37,6 @@ public class Jmdict {
 //			CREATE INDEX "ix_kanji" ON "dict" ("kanji" ASC);
 //
 //			CREATE INDEX "ix_kana" ON "dict" ("kana" ASC);
-			int count = 0;
 			//int page = 50;
 			while (rs.next()) {
 				//System.out.println("kana = " + rs.getString("kana"));
@@ -94,6 +99,7 @@ public class Jmdict {
 				System.err.println(e);
 			}
 		}
+		return count;
 	}
 
 	public static void main(String[] args) {

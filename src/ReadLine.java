@@ -1,6 +1,22 @@
 import java.io.*;
 
 public class ReadLine {
+	
+	public static void doQuery(String strLine){
+		if(strLine.length()>0){
+			String hiragana = JapaneseCharacter.toHiragana(strLine);
+			boolean isKanji = JapaneseCharacter.isKanji(strLine.charAt(0));
+			String romaji = JapaneseCharacter.toRomaji(hiragana);
+			System.out.println(hiragana + " | " + romaji);
+			int count = Jmdict.doQuery(hiragana, isKanji);
+			
+			if(count==0){
+				doQuery(strLine.substring(0, strLine.length()-1));
+			}
+		}
+		
+	}
+	
 	public static void main(String[] args) {
 		
 //		File f = new File("lib/dict.sqlite");
@@ -24,13 +40,7 @@ public class ReadLine {
 					System.out.println("can't convert " + page + " to int.");
 				}
 			}
-			
-			if(strLine.length()>0){
-				String hiragana = JapaneseCharacter.toHiragana(strLine);
-				String romaji = JapaneseCharacter.toRomaji(hiragana);
-				System.out.println(hiragana + " | " + romaji);
-				Jmdict.doQuery(hiragana);
-			}
+			doQuery(strLine);
 		}
 
 	}
